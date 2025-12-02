@@ -1,0 +1,12 @@
+<div style="border:1px solid #ccc; padding:15px; margin-bottom:20px;">
+  <h3>Add New Post</h3>
+
+  <label>Title:</label><br>
+  <input type="text" [(ngModel)]="title"><br><br>
+
+  <label>Body:</label><br>
+  <textarea rows="4" [(ngModel)]="body"></textarea><br><br>
+
+  <button (click)="submitForm()">Submit</button>
+  <button (click)="cancel.emit()">Cancel</button>
+</div>

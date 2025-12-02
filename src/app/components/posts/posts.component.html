@@ -1,0 +1,103 @@
+<div style="width:80%; margin:auto;">
+
+  <!-- SUCCESS POPUP -->
+  <div *ngIf="showSuccessPopup"
+       style="
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0,0,0,0.4);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       ">
+
+    <div style="
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      ">
+      
+      <h3 style="color: green;">Success</h3>
+      <p>{{ successMessage }}</p>
+
+      <button (click)="closeSuccessPopup()"
+              style="padding:5px 10px; margin-top:10px;">
+        Close
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- ERROR POPUP -->
+  <div *ngIf="showErrorPopup"
+       style="
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0,0,0,0.4);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       ">
+    
+    <div style="
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      ">
+      
+      <h3 style="color:red;">Error</h3>
+      <p>{{ errorMessage }}</p>
+
+      <button (click)="closeErrorPopup()"
+              style="padding:5px 10px; margin-top:10px;">
+        Close
+      </button>
+    </div>
+  </div>
+
+
+
+  <button (click)="openForm()" style="margin-bottom:15px; padding:5px 10px;">
+    Add Post
+  </button>
+
+  <!-- ADD POST FORM -->
+  <app-add-post
+    *ngIf="showForm"
+    (postCreated)="handlePostCreated($event)"
+    (error)="handleError($event)"
+    (cancel)="closeForm()">
+  </app-add-post>
+
+  <!-- POSTS TABLE -->
+  <table border="1" width="100%" cellpadding="8">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of posts">
+        <td>{{ p.id }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
