@@ -14,14 +14,14 @@ export class PostsComponent implements OnInit {
   posts: Post[] = [];
   showForm = false;
 
-  // Popups
+  
   showErrorPopup = false;
   errorMessage = '';
 
   showSuccessPopup = false;
   successMessage = '';
 
-  // ID counter
+  
   nextId = 1;
 
   constructor(private postsService: PostsService) {}
@@ -33,13 +33,13 @@ export class PostsComponent implements OnInit {
   loadPosts() {
     this.postsService.getPosts().subscribe((data) => {
 
-      // Show ALL posts from the API
+      
       this.posts = data;
 
-      // Find last post safely
+      
       const lastPost = this.posts.length > 0 ? this.posts[this.posts.length - 1] : null;
 
-      // Safely compute nextId
+      
       this.nextId = (lastPost && lastPost.id) ? lastPost.id + 1 : 1;
 
       console.log("Next ID starts from:", this.nextId);
@@ -61,16 +61,16 @@ export class PostsComponent implements OnInit {
       body: post.body
     };
 
-    // Add the post at the bottom
+    
     this.posts.push(finalPost);
 
     this.showForm = false;
 
-    // Show success popup
+    
     this.successMessage = "Post added successfully!";
     this.showSuccessPopup = true;
 
-    // Clear any error popup
+    
     this.showErrorPopup = false;
     this.errorMessage = '';
   }

@@ -1,6 +1,6 @@
 <div style="width:80%; margin:auto;">
 
-  <!-- SUCCESS POPUP -->
+  
   <div *ngIf="showSuccessPopup"
        style="
          position: fixed;
@@ -35,7 +35,7 @@
 
 
 
-  <!-- ERROR POPUP -->
+  
   <div *ngIf="showErrorPopup"
        style="
          position: fixed;
@@ -74,7 +74,7 @@
     Add Post
   </button>
 
-  <!-- ADD POST FORM -->
+  
   <app-add-post
     *ngIf="showForm"
     (postCreated)="handlePostCreated($event)"
@@ -82,7 +82,7 @@
     (cancel)="closeForm()">
   </app-add-post>
 
-  <!-- POSTS TABLE -->
+  
   <table border="1" width="100%" cellpadding="8">
     <thead>
       <tr>

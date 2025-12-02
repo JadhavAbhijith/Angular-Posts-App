@@ -21,7 +21,7 @@ export class AddPostComponent {
 
   submitForm() {
 
-    // VALIDATION - title/body cannot be empty
+    
     if (!this.title.trim() || !this.body.trim()) {
       this.error.emit("Post cannot be empty");
       return;
