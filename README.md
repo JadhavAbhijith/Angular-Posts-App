@@ -76,34 +76,16 @@ This project was developed as part of a **Frontend Intern Assignment**.
 
 ---
 
-## 📂 Project Structure
-
-src/
-├── app/
-│ ├── components/
-│ │ ├── posts/
-│ │ │ ├── posts.component.ts
-│ │ │ ├── posts.component.html
-│ │ │ └── posts.component.css
-│ │ ├── add-post/
-│ │ │ ├── add-post.component.ts
-│ │ │ └── add-post.component.html
-│ ├── services/
-│ │ └── posts.service.ts
-│ ├── app.component.ts
-│ ├── app.component.html
-│ └── app.config.ts
-├── main.ts
-
----
-
 ## 🔧 Installation & Setup
 
 ### 1️⃣ Clone the repository:
 
 git clone https://github.com/YOUR_USERNAME/angular-posts-app.git
+
 cd angular-posts-app
+
 npm install
+
 ng serve
 
 Open : http://localhost:4200
@@ -113,14 +95,15 @@ Open : http://localhost:4200
 🚀 Deployment (GitHub Pages)
 
 Build the project:
+
 ng build --base-href /angular-posts-app/
 
 Deploy:
+
 npx angular-cli-ghpages --dir=dist/frontend-posts-app/browser
 
 
 Then enable GitHub Pages:
 
 Repo → Settings → Pages → Select gh-pages branch
-## 📂 Project Structure
 
