@@ -4,11 +4,10 @@ import { AddPostComponent } from '../add-post/add-post.component';
 import { PostsService, Post } from '../../services/posts.service';
 
 @Component({
-  selector: 'app-posts',
-  standalone: true,
-  imports: [CommonModule, AddPostComponent],
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css']
+    selector: 'app-posts',
+    imports: [CommonModule, AddPostComponent],
+    templateUrl: './posts.component.html',
+    styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
 

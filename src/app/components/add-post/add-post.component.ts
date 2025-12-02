@@ -4,10 +4,9 @@ import { PostsService, Post } from '../../services/posts.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-add-post',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './add-post.component.html',
+    selector: 'app-add-post',
+    imports: [FormsModule, CommonModule],
+    templateUrl: './add-post.component.html'
 })
 export class AddPostComponent {
 
