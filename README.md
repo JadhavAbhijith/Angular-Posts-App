@@ -1,4 +1,4 @@
-# 📘 Angular Posts App — Frontend Assignment
+# 📘 Angular Posts App 
 
 A simple Angular application built using **Angular 20 (Standalone Components + Vite)** that fetches posts from an API, displays them in a table, allows adding new posts, and handles success & error feedback through popup modals.
 
@@ -8,7 +8,7 @@ This project was developed as part of a **Frontend Intern Assignment**.
 
 ## 🚀 Live Demo  
 🔗 **Hosted on GitHub Pages:**  
-`https://YOUR_USERNAME.github.io/angular-posts-app/`
+https://jadhavabhijith.github.io/Angular-Posts-App/
 
 ---
 
